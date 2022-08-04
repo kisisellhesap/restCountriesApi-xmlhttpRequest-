@@ -1,0 +1,192 @@
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CountriesApi</title>
+</head>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Mukta&display=swap');
+* {
+margin:0;
+padding:0;
+font-family: 'Mukta', sans-serif;
+box-sizing: border-box;
+
+}
+
+body {
+display: flex;
+flex-direction: column;
+gap:2rem;
+min-width: 350px;
+}
+.control {
+width: 100%;
+  
+display: flex;
+justify-content: center;
+gap: 1rem;
+padding: 1rem;
+}
+.control input {
+background-color: transparent;
+outline: none;
+font-size: .8rem;
+border-radius: .5rem;
+padding:.5rem;
+border: 1px  solid rgba(0, 0, 0, 0.5);
+  
+}
+
+.control button {
+padding: .5rem;
+border-radius: .5rem;
+background-color: transparent;
+font-size: .8rem;
+cursor: pointer;
+border: 1px  solid rgba(0, 0, 0, 0.5);
+
+}
+
+.container {
+display: flex;
+width: 100%;
+padding: 1rem;
+   
+}
+
+.country {
+
+}
+
+.neightboring {
+display: flex;
+gap: 1rem;
+flex-wrap: wrap; 
+justify-content:flex-start;
+align-items: center;
+}
+
+.card {
+display: flex;
+flex-direction: column;
+width:310px;
+border-radius: .5rem;
+border: 1px  solid rgba(0, 0, 0, 0.5);
+padding:.5rem;
+}
+
+.card > span {
+padding: 1rem;
+border-top: 1px  solid rgba(0, 0, 0, 0.5);
+font-size: .8rem;
+white-space:nowrap;
+
+}
+
+img {
+ object-fit: cover;
+ width: 100%;
+ height: 200px;
+ border-top-left-radius: .5rem;
+ border-top-right-radius: .5rem;
+}
+
+.country-container {
+display: flex;
+flex-direction: column;
+gap: 1.5rem;
+align-items: center;
+width: 30%;
+}
+
+.neighboring-countries {
+display: flex;
+flex-direction: column;
+gap: 1.5rem;
+  align-items: center;
+width: 70%;
+}
+.neighboring-countries h2  {
+text-align: center;
+font-size: 1.2rem;
+}
+.country-container h2  {
+  
+text-align: center;
+font-size: 1.2rem;
+}
+h3 {
+text-align: center;
+width: 100%;
+margin-top: 150px;
+font-size: 1rem;
+
+}
+
+
+
+@media screen and (max-width:1274px) {
+.card {
+width: 300px;
+}
+
+
+}
+
+@media screen and (max-width:970px) {
+.container{
+flex-wrap: wrap;
+flex-direction: column;
+}
+.neighboring-countries, .country-container{
+width: 100%;
+
+ }
+
+ .neightboring {
+    justify-content: center;
+}
+
+}
+
+
+
+
+@media screen and (max-width:864px) {
+
+.neightboring {
+    justify-content: center;
+}
+
+}
+</style>
+<body>
+
+<div class="control">
+<input type="text" class="text" placeholder=" search countries">
+<button class="submit">Search</button>
+</div>
+
+<div class="container">
+<div class="country-container">
+<h2>Country</h2>
+<div class="country">
+   
+</div>
+</div>
+ 
+
+<div class="neighboring-countries">
+<h2>Neightboring Countries</h2>
+<div class="neightboring">
+
+</div>
+</div>
+</div>
+ 
+
+<script src="exampleCountries.js"></script>
+</body>
+</html>
